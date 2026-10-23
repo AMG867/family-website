@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Pelumi Family</title>
+  <meta name="description" content="Photos, stories and tributes from the Pelumi family.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Ajilore Family</a>
+    <nav aria-label="Main">
+      <a href="#galleries">Galleries</a>
+      <a href="#tributes">Tributes</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: the main picture is the face of the site -->
+    <section class="hero" aria-label="Welcome">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>The Ajilore Family</h1>
+          <p>Photos, stories and tributes from our family, all in one place.</p>
+          <a class="button" href="#galleries">Browse photos</a>
+        </div>
+        <figure class="hero-photo">
+          <img src="family/main.jpg" alt="The Pelumi family together" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Section 1: Galleries -->
+    <section id="galleries" class="section">
+      <div class="wrap">
+        <h2>Galleries</h2>
+        <p class="section-intro">Choose a person to see their photos. Tap a photo to view it larger.</p>
+
+        <div id="filters" class="filters" role="group" aria-label="Choose a gallery"></div>
+
+        <div id="gallery" class="gallery"></div>
+        <p id="gallery-empty" class="empty" hidden></p>
+        <button id="load-more" class="button button-quiet" type="button" hidden>Show more photos</button>
+      </div>
+    </section>
+
+    <!-- Section 2: Tributes -->
+    <section id="tributes" class="section section-tint">
+      <div class="wrap">
+        <h2>Tributes</h2>
+        <p id="tributes-empty" class="empty">Tributes will be added here soon.</p>
+        <div id="tribute-list" class="tribute-list"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: About -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>About</h2>
+        <p class="section-intro">Who is who in the family.</p>
+        <div id="people" class="people"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>The Pelumi Family</p>
+  </footer>
+
+  <!-- Photo viewer -->
+  <dialog id="lightbox" class="lightbox" aria-label="Photo viewer">
+    <button id="lb-close" class="lb-btn lb-close" type="button" aria-label="Close photo viewer">&times;</button>
+    <button id="lb-prev" class="lb-btn lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+    <div class="lightbox-stage">
+      <img id="lb-img" src="" alt="">
+    </div>
+    <button id="lb-next" class="lb-btn lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+    <p id="lb-caption" class="lb-caption" aria-live="polite"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
