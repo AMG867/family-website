@@ -13,8 +13,9 @@
   --muted: #5b6078;
   --radius: 6px;
 
-  --font-display: 'Young Serif', Georgia, 'Times New Roman', serif;
-  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: "Young Serif", Georgia, "Times New Roman", serif;
+  --font-body:
+    "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 *,
@@ -107,7 +108,7 @@ h3 {
 }
 
 .site-header nav a:hover,
-.site-header nav a[aria-current='true'] {
+.site-header nav a[aria-current="true"] {
   color: #fff;
   border-bottom-color: var(--marigold);
 }
@@ -117,8 +118,16 @@ h3 {
 .hero {
   background-color: var(--ink);
   background-image:
-    radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.08) 2px, transparent 3px),
-    radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.05) 9px, transparent 10px);
+    radial-gradient(
+      circle at 20px 20px,
+      rgba(255, 255, 255, 0.08) 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 0 0,
+      rgba(255, 255, 255, 0.05) 9px,
+      transparent 10px
+    );
   background-size: 40px 40px;
   color: #fff;
   padding: 3rem 1.25rem 4rem;
@@ -185,7 +194,9 @@ h3 {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .button:hover {
@@ -255,14 +266,16 @@ h3 {
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .filter:hover {
   border-color: var(--ink);
 }
 
-.filter[aria-pressed='true'] {
+.filter[aria-pressed="true"] {
   background: var(--ink);
   color: #fff;
 }
@@ -315,36 +328,88 @@ h3 {
 
 /* ---------- Tributes ---------- */
 
+/* Filter buttons sit on the tinted background, so give them a white fill */
+.section-tint .filter {
+  background: #fff;
+}
+
+.section-tint .filter[aria-pressed="true"] {
+  background: var(--ink);
+}
+
 .tribute-list {
   display: grid;
-  gap: 2rem;
-  max-width: 44rem;
+  gap: 3rem;
+  max-width: 46rem;
 }
 
 .tribute {
-  margin: 0;
   padding-left: 1.25rem;
   border-left: 4px solid var(--marigold);
 }
 
-.tribute blockquote {
-  margin: 0 0 0.6rem;
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  line-height: 1.5;
+.tribute-for {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tribute-title {
+  margin-bottom: 0.9rem;
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   color: var(--ink);
 }
 
-.tribute figcaption {
-  color: var(--muted);
-  font-weight: 600;
+.tribute-text > p {
+  margin: 0 0 1rem;
+  line-height: 1.75;
 }
 
-.tribute img {
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 1rem;
-  border-radius: var(--radius);
+.tribute-text.is-collapsed {
+  position: relative;
+  max-height: 11.5rem;
+  overflow: hidden;
+}
+
+.tribute-text.is-collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4.5rem;
+  background: linear-gradient(to bottom, rgba(232, 235, 243, 0), var(--mist));
+  pointer-events: none;
+}
+
+.tribute-toggle {
+  margin: 0.25rem 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.tribute-from {
+  margin: 1.25rem 0 0;
+}
+
+.tribute-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.tribute-role {
+  display: block;
+  color: var(--muted);
 }
 
 /* ---------- About ---------- */
@@ -416,6 +481,12 @@ img.avatar {
 .person-details ul {
   margin: 0;
   padding-left: 1.1rem;
+}
+
+.person-bio {
+  margin: 0 0 1rem;
+  max-width: 44rem;
+  line-height: 1.7;
 }
 
 .person-pending {
