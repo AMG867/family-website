@@ -29,20 +29,6 @@ const EXTENSIONS_TO_TRY = ['jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG'];
 */
 const PEOPLE = [
   {
-    id: 'daddy',
-    label: 'Daddy',
-    photos: [84],
-    fullName: '',
-    portrait: 84,
-    bio: [
-      'Emmanuel Sesan Ajilore was born on 25 December 1954 in Osu, Atakunmosa West, Osun State. His parents were Chief Joseph S. Ajilore, the Loyin of Osu (1970–1993), and Florence Folorunso Ajilore (née Ogundipe). They valued education highly and raised all their children in Christian ways. He attended Ife-Oluwa Primary School (1961–67), Atakunmosa High School (1969–73) and Oyo State Teachers Training College (1974–75). He later did his HSC at Government College Ibadan (1977–79) and studied Banking and Finance at the University of Lagos (1981–84). He is a Certified Microfinance Banker of Nigeria.',
-      'He began his career as an Agricultural Science teacher at Mayflower School, Ikenne (1975–77). After his NYSC at Allied Bank (1984–85), he was retained as an officer and left in 1991 as a Manager. He then served as Senior Manager at a Mortgage Bank (1991–95) and briefly worked at COSIT, University of Lagos, in 1996. At Gateway Bank he became Ota Branch Manager in 1996, won Best Branch Manager (1997–98), and left in 2000 as the Pioneer Abuja Branch Manager. In 2000 he co-founded a finance company that became a Microfinance Bank in 2008, and he left as Managing Director in 2013 to start his own business.',
-      'Outside work, he was Social Secretary of the Iwalewa Social Club in Osu (1971) and later a Boarding House Master at Mayflower School (1977). At UNILAG he was Social Secretary (1981/82) and then President (1982/83) of the Finance Students Association. He married Mrs Abosede Olufunmilayo Ajilore (née Obafemi) in 1985, and they have children. A devoted Christian who loves children, he was appointed Pastor in charge of the children’s church at MFM Lugbe-Abuja in 2012.'
-    ],
-    schools: [],
-    details: []
-  },
-  {
     id: 'mummy',
     label: 'Mummy',
     photos: [77],
@@ -52,6 +38,20 @@ const PEOPLE = [
       'Mrs Bosede Ajilore was born on 22nd November 1964 to the late Mr Moses O. Obafemi and the late Mrs Adebimpe Obafemi (née Shoyombo) in Lagos. She attended Ladi-Lak Primary School, Bariga, and finished in 1976.',
       'She proceeded to Girls Secondary Grammar School, Gbagada, and finished in 1981. She was employed by Allied Bank of Nigeria Ltd in February 1982. While in the Bank, she started writing Chartered Institute of Bankers professional examinations.',
       'She met her husband in the bank and they wedded in 1985. Mrs Bosede Ajilore left the banking industry in 1995 to start her private business. She is blessed with a loving husband, and wonderful children and grandchildren.'
+    ],
+    schools: [],
+    details: []
+  },
+  {
+    id: 'daddy',
+    label: 'Daddy',
+    photos: [84],
+    fullName: '',
+    portrait: 84,
+    bio: [
+      'Emmanuel Sesan Ajilore was born on 25 December 1954 in Osu, Atakunmosa West, Osun State. His parents were Chief Joseph S. Ajilore, the Loyin of Osu (1970–1993), and Florence Folorunso Ajilore (née Ogundipe). They valued education highly and raised all their children in Christian ways. He attended Ife-Oluwa Primary School (1961–67), Atakunmosa High School (1969–73) and Oyo State Teachers Training College (1974–75). He later did his HSC at Government College Ibadan (1977–79) and studied Banking and Finance at the University of Lagos (1981–84). He is a Certified Microfinance Banker of Nigeria.',
+      'He began his career as an Agricultural Science teacher at Mayflower School, Ikenne (1975–77). After his NYSC at Allied Bank (1984–85), he was retained as an officer and left in 1991 as a Manager. He then served as Senior Manager at a Mortgage Bank (1991–95) and briefly worked at COSIT, University of Lagos, in 1996. At Gateway Bank he became Ota Branch Manager in 1996, won Best Branch Manager (1997–98), and left in 2000 as the Pioneer Abuja Branch Manager. In 2000 he co-founded a finance company that became a Microfinance Bank in 2008, and he left as Managing Director in 2013 to start his own business.',
+      'Outside work, he was Social Secretary of the Iwalewa Social Club in Osu (1971) and later a Boarding House Master at Mayflower School (1977). At UNILAG he was Social Secretary (1981/82) and then President (1982/83) of the Finance Students Association. He married Mrs Abosede Olufunmilayo Ajilore (née Obafemi) in 1985, and they have children. A devoted Christian who loves children, he was appointed Pastor in charge of the children’s church at MFM Lugbe-Abuja in 2012.'
     ],
     schools: [],
     details: []
@@ -139,6 +139,16 @@ const TRIBUTES = [
     role: 'Loving husband'
   },
   {
+    to: ['mummy'],
+    label: 'For Mummy’s 60th birthday',
+    title: 'Tribute to My Mum on Her 60th Birthday',
+    text: [
+      'Today is a day filled with love, joy, and gratitude, as we celebrate the 60th birthday of an extraordinary woman—my mum. You have been a role model to me and always driving me and my siblings to attain success. You have also raised us in the way of the Lord. It is my prayer that you will continually be a delight to God and man. As you turn 60 today, I want you to know how deeply you are loved, cherished, and appreciated. Here’s to many more years of health, happiness, and shared memories. I am so grateful for you, and I look forward to creating even more beautiful memories together. Happy Birthday, Mum. I love you more than words can express.'
+    ],
+    from: 'Banwo Tolu Ajilore',
+    role: 'First son'
+  },
+  {
     to: ['daddy'],
     label: 'For Daddy’s 70th birthday',
     title: 'Tribute to My Dad on His 70th Birthday',
@@ -149,6 +159,19 @@ const TRIBUTES = [
     ],
     from: 'Banwo Tolu Ajilore',
     role: 'First son'
+  },
+  {
+    to: ['mummy'],
+    label: 'For Mummy’s 60th birthday',
+    title: '',
+    text: [
+      'My mother is one of the bravest, but yet gentle personalities I have ever met.',
+      'Without you, I wouldn’t be here today. You treasured and loved me as your own. You sacrificed your educational and career progression to make sure your children get the best attention. I cannot forget the countless times when my siblings and I were at one point or the other ill, the mannerism with which you run helter skelter to ensure we are fine and recover fully. No wonder many people felt you were in the nursing profession because of the extent to which you show care and love. You possess some qualities, which are so rare, which is the quiet, calm, and listening spirit, which you have been exhibiting all through the years I was at home and even till now. No wonder the Bible is clear on the fact that a virtuous woman builds her home.',
+      'You have built your home for over 39 years and are still counting. You taught me contentment, submissiveness, loyalty, faithfulness, and commitment as you stood as a supportive backbone to my Dad. One of the things I learned from the motherhood experience was when I had Oluwamayowa, then I began to sincerely appreciate all the sacrifices you made for me and my siblings. You are an early riser, as no one can beat the record when it comes to being the first to an appointment. You are indeed an incredible mother. My earnest prayer is that the Lord will strengthen and give you the grace to live long and enjoy the fruits of your labour in Jesus’ name.',
+      'Happy 60th birthday, Mum.'
+    ],
+    from: 'Mrs Dolapo Adeniran',
+    role: 'First daughter'
   },
   {
     to: ['daddy'],
@@ -163,11 +186,11 @@ const TRIBUTES = [
     role: 'First daughter'
   },
   {
-    to: ['daddy'],
-    label: 'For Daddy’s 70th birthday',
+    to: ['mummy'],
+    label: 'For Mummy’s 60th birthday',
     title: '',
     text: [
-      'Happy 70th Birthday, my lovely Dad. I’m so grateful to God for blessing me with the best Daddy ever. You have been so wonderful to us as a family. Your endless prayers, moral support and advice. You’re a great man and you will forever be loved. I love you, Daddy.'
+      'Happy 60th Birthday, Mummy! Mummy Iya Mojisola, my darling mother, you carried me in your tummy for nine months. Thank you for all the sacrifices you made for me, your love and care. I love you so much, Mummy.'
     ],
     from: 'Ojo Mojisola Kikelomo',
     role: 'Daughter'
@@ -177,10 +200,10 @@ const TRIBUTES = [
     label: 'For Daddy’s 70th birthday',
     title: '',
     text: [
-      'Daddy, 70 years young today! Your life has been a remarkable journey, filled with love, laughter, and adventure. I’m grateful for the sacrifices you’ve made, the wisdom you’ve shared, and the unconditional love you’ve shown me. Wishing you many more years of joy, good health, and cherished memories. Happy 70th birthday!'
+      'Happy 70th Birthday, my lovely Dad. I’m so grateful to God for blessing me with the best Daddy ever. You have been so wonderful to us as a family. Your endless prayers, moral support and advice. You’re a great man and you will forever be loved. I love you, Daddy.'
     ],
-    from: 'Pelumi Ajilore',
-    role: 'Son'
+    from: 'Ojo Mojisola Kikelomo',
+    role: 'Daughter'
   },
   {
     to: ['daddy', 'mummy'],
@@ -201,42 +224,19 @@ const TRIBUTES = [
   {
     to: ['mummy'],
     label: 'For Mummy’s 60th birthday',
-    title: 'Tribute to My Mum on Her 60th Birthday',
-    text: [
-      'Today is a day filled with love, joy, and gratitude, as we celebrate the 60th birthday of an extraordinary woman—my mum. You have been a role model to me and always driving me and my siblings to attain success. You have also raised us in the way of the Lord. It is my prayer that you will continually be a delight to God and man. As you turn 60 today, I want you to know how deeply you are loved, cherished, and appreciated. Here’s to many more years of health, happiness, and shared memories. I am so grateful for you, and I look forward to creating even more beautiful memories together. Happy Birthday, Mum. I love you more than words can express.'
-    ],
-    from: 'Banwo Tolu Ajilore',
-    role: 'First son'
-  },
-  {
-    to: ['mummy'],
-    label: 'For Mummy’s 60th birthday',
-    title: '',
-    text: [
-      'My mother is one of the bravest, but yet gentle personalities I have ever met.',
-      'Without you, I wouldn’t be here today. You treasured and loved me as your own. You sacrificed your educational and career progression to make sure your children get the best attention. I cannot forget the countless times when my siblings and I were at one point or the other ill, the mannerism with which you run helter skelter to ensure we are fine and recover fully. No wonder many people felt you were in the nursing profession because of the extent to which you show care and love. You possess some qualities, which are so rare, which is the quiet, calm, and listening spirit, which you have been exhibiting all through the years I was at home and even till now. No wonder the Bible is clear on the fact that a virtuous woman builds her home.',
-      'You have built your home for over 39 years and are still counting. You taught me contentment, submissiveness, loyalty, faithfulness, and commitment as you stood as a supportive backbone to my Dad. One of the things I learned from the motherhood experience was when I had Oluwamayowa, then I began to sincerely appreciate all the sacrifices you made for me and my siblings. You are an early riser, as no one can beat the record when it comes to being the first to an appointment. You are indeed an incredible mother. My earnest prayer is that the Lord will strengthen and give you the grace to live long and enjoy the fruits of your labour in Jesus’ name.',
-      'Happy 60th birthday, Mum.'
-    ],
-    from: 'Mrs Dolapo Adeniran',
-    role: 'First daughter'
-  },
-  {
-    to: ['mummy'],
-    label: 'For Mummy’s 60th birthday',
-    title: '',
-    text: [
-      'Happy 60th Birthday, Mummy! Mummy Iya Mojisola, my darling mother, you carried me in your tummy for nine months. Thank you for all the sacrifices you made for me, your love and care. I love you so much, Mummy.'
-    ],
-    from: 'Ojo Mojisola Kikelomo',
-    role: 'Daughter'
-  },
-  {
-    to: ['mummy'],
-    label: 'For Mummy’s 60th birthday',
     title: '',
     text: [
       'Happy 60th birthday to the most selfless, loving, and incredible mom in the world! Today marks a significant milestone, and I’m so grateful to have you in my life. Your guidance, support, and unwavering love mean everything to me. Cheers to many more years of love, laughter, and adventure together!'
+    ],
+    from: 'Pelumi Ajilore',
+    role: 'Son'
+  },
+  {
+    to: ['daddy'],
+    label: 'For Daddy’s 70th birthday',
+    title: '',
+    text: [
+      'Daddy, 70 years young today! Your life has been a remarkable journey, filled with love, laughter, and adventure. I’m grateful for the sacrifices you’ve made, the wisdom you’ve shared, and the unconditional love you’ve shown me. Wishing you many more years of joy, good health, and cherished memories. Happy 70th birthday!'
     ],
     from: 'Pelumi Ajilore',
     role: 'Son'
@@ -564,11 +564,8 @@ function renderTributes() {
   el.tributesEmpty.hidden = true;
 
   // One button per person who has tributes written for them
-  const recipients = [];
-  TRIBUTES.forEach(function (t) {
-    (t.to || []).forEach(function (id) {
-      if (recipients.indexOf(id) === -1) recipients.push(id);
-    });
+  const recipients = PEOPLE.map(function (p) { return p.id; }).filter(function (id) {
+    return TRIBUTES.some(function (t) { return (t.to || []).indexOf(id) !== -1; });
   });
 
   const options = [{ id: 'all', label: 'All tributes' }].concat(
